@@ -11,6 +11,7 @@ type JobResultProps = {
 async function JobResults({
   filterValues: { q, location, remote, type },
 }: JobResultProps) {
+  // this is for full search using prisma + postgre
   const searchString = q?.trim().replace(" ", " & ");
 
   const searchFilter: Prisma.JobWhereInput = searchString
